@@ -1,0 +1,1634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{399FE8B9-B485-4311-BFCC-3F192A439F38}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OCPPortal_MVC</RootNamespace>
+    <AssemblyName>OCPPortal_MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.30506.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\fade.css" />
+    <Content Include="Content\fade3.css" />
+    <Content Include="Content\JQWidgets\images\backgroundTop.png" />
+    <Content Include="Content\JQWidgets\images\backImage.png" />
+    <Content Include="Content\JQWidgets\images\bg_black.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackhover.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackhover_horizontal.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackpressed.png" />
+    <Content Include="Content\JQWidgets\images\bg_blackpressed_horizontal.png" />
+    <Content Include="Content\JQWidgets\images\bg_black_horizontal.png" />
+    <Content Include="Content\JQWidgets\images\bg_blueenergy.png" />
+    <Content Include="Content\JQWidgets\images\bg_darkblue.png" />
+    <Content Include="Content\JQWidgets\images\bg_darkbluehover.png" />
+    <Content Include="Content\JQWidgets\images\bg_darkbluepressed.png" />
+    <Content Include="Content\JQWidgets\images\blackbackground.png" />
+    <Content Include="Content\JQWidgets\images\black_gradient.png" />
+    <Content Include="Content\JQWidgets\images\check_black.png" />
+    <Content Include="Content\JQWidgets\images\check_blue.png" />
+    <Content Include="Content\JQWidgets\images\check_blue_indeterminate.png" />
+    <Content Include="Content\JQWidgets\images\check_disabled.png" />
+    <Content Include="Content\JQWidgets\images\check_indeterminate_black.png" />
+    <Content Include="Content\JQWidgets\images\check_indeterminate_disabled.png" />
+    <Content Include="Content\JQWidgets\images\check_indeterminate_white.png" />
+    <Content Include="Content\JQWidgets\images\check_lightblue.png" />
+    <Content Include="Content\JQWidgets\images\check_lightblue_indeterminate.png" />
+    <Content Include="Content\JQWidgets\images\check_white.png" />
+    <Content Include="Content\JQWidgets\images\close.png" />
+    <Content Include="Content\JQWidgets\images\close_black.png" />
+    <Content Include="Content\JQWidgets\images\close_blue.png" />
+    <Content Include="Content\JQWidgets\images\close_white.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\bar-hue.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\bar-saturation.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\map-hue.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\map-saturation-overlay.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\map-saturation.png" />
+    <Content Include="Content\JQWidgets\images\colorpicker\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\crosshair-white.png" />
+    <Content Include="Content\JQWidgets\images\crosshair.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_222222_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_a83300_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_cccccc_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\darkred_gradient.png" />
+    <Content Include="Content\JQWidgets\images\drag.png" />
+    <Content Include="Content\JQWidgets\images\dragcancel.png" />
+    <Content Include="Content\JQWidgets\images\error.png" />
+    <Content Include="Content\JQWidgets\images\filter.png" />
+    <Content Include="Content\JQWidgets\images\html_editor.png" />
+    <Content Include="Content\JQWidgets\images\html_editor_white.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-calendar.png" />
+    <Content Include="Content\JQWidgets\images\icon-cancel-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-cancel.png" />
+    <Content Include="Content\JQWidgets\images\icon-delete-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-delete.png" />
+    <Content Include="Content\JQWidgets\images\icon-down-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-down-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-down-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-down.png" />
+    <Content Include="Content\JQWidgets\images\icon-edit-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-edit.png" />
+    <Content Include="Content\JQWidgets\images\icon-first-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-first-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-first-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-first.png" />
+    <Content Include="Content\JQWidgets\images\icon-last-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-last-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-last-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-last.png" />
+    <Content Include="Content\JQWidgets\images\icon-left-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-left-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-left-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-left.png" />
+    <Content Include="Content\JQWidgets\images\icon-menu-minimized-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-menu-minimized.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence-exception-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence-exception.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-recurrence.png" />
+    <Content Include="Content\JQWidgets\images\icon-right-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-right-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-right-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-right.png" />
+    <Content Include="Content\JQWidgets\images\icon-save-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-save.png" />
+    <Content Include="Content\JQWidgets\images\icon-showpassword-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-showpassword.png" />
+    <Content Include="Content\JQWidgets\images\icon-time-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-time.png" />
+    <Content Include="Content\JQWidgets\images\icon-up-blue.png" />
+    <Content Include="Content\JQWidgets\images\icon-up-transparent.png" />
+    <Content Include="Content\JQWidgets\images\icon-up-white.png" />
+    <Content Include="Content\JQWidgets\images\icon-up.png" />
+    <Content Include="Content\JQWidgets\images\info.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_4eb305_256x240.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_72b42d_256x240.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\le-frog\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\icon-first.png" />
+    <Content Include="Content\JQWidgets\images\lightness\icon-last.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_222222_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\lightness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\loader-small.gif" />
+    <Content Include="Content\JQWidgets\images\loader.gif" />
+    <Content Include="Content\JQWidgets\images\mail.png" />
+    <Content Include="Content\JQWidgets\images\menubutton.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-down-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-down.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-first-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-first.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-last-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-last.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-left-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-left.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-right - Copy.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-right-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-right.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-up-white.png" />
+    <Content Include="Content\JQWidgets\images\metro-icon-up.png" />
+    <Content Include="Content\JQWidgets\images\multi-arrow.gif" />
+    <Content Include="Content\JQWidgets\images\office-icon-down.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-first.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-last.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-left.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-right.png" />
+    <Content Include="Content\JQWidgets\images\office-icon-up.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_3383bb_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_454545_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_999999_256x240.png" />
+    <Content Include="Content\JQWidgets\images\overcast\ui-icons_fbc856_256x240.png" />
+    <Content Include="Content\JQWidgets\images\pin-black.png" />
+    <Content Include="Content\JQWidgets\images\pin-blue.png" />
+    <Content Include="Content\JQWidgets\images\pin-lightblue.png" />
+    <Content Include="Content\JQWidgets\images\pin-white.png" />
+    <Content Include="Content\JQWidgets\images\pin-yellow.png" />
+    <Content Include="Content\JQWidgets\images\pin.png" />
+    <Content Include="Content\JQWidgets\images\pinned-black.png" />
+    <Content Include="Content\JQWidgets\images\pinned-blue.png" />
+    <Content Include="Content\JQWidgets\images\pinned-lightblue.png" />
+    <Content Include="Content\JQWidgets\images\pinned-white.png" />
+    <Content Include="Content\JQWidgets\images\pinned-yellow.png" />
+    <Content Include="Content\JQWidgets\images\pinned.png" />
+    <Content Include="Content\JQWidgets\images\plus.png" />
+    <Content Include="Content\JQWidgets\images\plus_white.png" />
+    <Content Include="Content\JQWidgets\images\pointer.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_classic.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_darkblue.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_shinyblack.png" />
+    <Content Include="Content\JQWidgets\images\rangebar_summer.png" />
+    <Content Include="Content\JQWidgets\images\redmond\icon-first.png" />
+    <Content Include="Content\JQWidgets\images\redmond\icon-last.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\JQWidgets\images\redmond\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\JQWidgets\images\red_arrow_down.png" />
+    <Content Include="Content\JQWidgets\images\red_arrow_up.png" />
+    <Content Include="Content\JQWidgets\images\red_gradient.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_black.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_disabled.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_indeterminate.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_check_white.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_classic_hover.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_classic_normal.png" />
+    <Content Include="Content\JQWidgets\images\roundbg_disabled.png" />
+    <Content Include="Content\JQWidgets\images\search.png" />
+    <Content Include="Content\JQWidgets\images\search_white.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_222222_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_454545_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_888888_256x240.png" />
+    <Content Include="Content\JQWidgets\images\smoothness\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sortasc.png" />
+    <Content Include="Content\JQWidgets\images\sortascbutton.png" />
+    <Content Include="Content\JQWidgets\images\sortdesc.png" />
+    <Content Include="Content\JQWidgets\images\sortdescbutton.png" />
+    <Content Include="Content\JQWidgets\images\sortremove.png" />
+    <Content Include="Content\JQWidgets\images\star.png" />
+    <Content Include="Content\JQWidgets\images\start\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_0078ae_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_056b93_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_f5e175_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Content\JQWidgets\images\start\ui-icons_fcd113_256x240.png" />
+    <Content Include="Content\JQWidgets\images\star_disabled.png" />
+    <Content Include="Content\JQWidgets\images\star_hover.png" />
+    <Content Include="Content\JQWidgets\images\success.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ReadMe.txt" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_d19405_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_eb990f_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Content\JQWidgets\images\sunny\ui-icons_ffe180_256x240.png" />
+    <Content Include="Content\JQWidgets\images\tick.png" />
+    <Content Include="Content\JQWidgets\images\time.png" />
+    <Content Include="Content\JQWidgets\images\track_classic.png" />
+    <Content Include="Content\JQWidgets\images\track_darkblue.png" />
+    <Content Include="Content\JQWidgets\images\track_shinyblack.png" />
+    <Content Include="Content\JQWidgets\images\track_summer.png" />
+    <Content Include="Content\JQWidgets\images\warning.png" />
+    <Content Include="Content\JQWidgets\images\wp_check_indeterminate_white.png" />
+    <Content Include="Content\JQWidgets\images\wp_check_white.png" />
+    <Content Include="Content\JQWidgets\jqx.android.css" />
+    <Content Include="Content\JQWidgets\jqx.arctic.css" />
+    <Content Include="Content\JQWidgets\jqx.base.css" />
+    <Content Include="Content\JQWidgets\jqx.black.css" />
+    <Content Include="Content\JQWidgets\jqx.blackberry.css" />
+    <Content Include="Content\JQWidgets\jqx.bootstrap.css" />
+    <Content Include="Content\JQWidgets\jqx.classic.css" />
+    <Content Include="Content\JQWidgets\jqx.darkblue.css" />
+    <Content Include="Content\JQWidgets\jqx.energyblue.css" />
+    <Content Include="Content\JQWidgets\jqx.fresh.css" />
+    <Content Include="Content\JQWidgets\jqx.glacier.css" />
+    <Content Include="Content\JQWidgets\jqx.highcontrast.css" />
+    <Content Include="Content\JQWidgets\jqx.metro.css" />
+    <Content Include="Content\JQWidgets\jqx.metrodark.css" />
+    <Content Include="Content\JQWidgets\jqx.mobile.css" />
+    <Content Include="Content\JQWidgets\jqx.office.css" />
+    <Content Include="Content\JQWidgets\jqx.orange.css" />
+    <Content Include="Content\JQWidgets\jqx.shinyblack.css" />
+    <Content Include="Content\JQWidgets\jqx.summer.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-darkness.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-le-frog.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-lightness.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-overcast.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-redmond.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-smoothness.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-start.css" />
+    <Content Include="Content\JQWidgets\jqx.ui-sunny.css" />
+    <Content Include="Content\JQWidgets\jqx.web.css" />
+    <Content Include="Content\JQWidgets\jqx.windowsphone.css" />
+    <Content Include="Content\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\smoothness\jquery-ui.css" />
+    <Content Include="Content\smoothness\jquery-ui.min.css" />
+    <Content Include="Content\smoothness\theme.css" />
+    <Content Include="Content\sticky-footer-navbar.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\tab.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Scripts\jquery-1.11.2.min.map" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\ajax-loader.gif" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\capacitorimage.png" />
+    <Content Include="Images\Dispatch.jpg" />
+    <Content Include="Images\energyEfficiency.jpg" />
+    <Content Include="Images\Finishing.jpg" />
+    <Content Include="Images\Folder.jpg" />
+    <Content Include="Images\green-home-icon.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\i.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\Release.jpg" />
+    <Content Include="Images\schneider.png" />
+    <Content Include="Images\schneider_logo.jpg" />
+    <Content Include="Images\SEPFC.jpg" />
+    <Content Include="Images\uiTabsArrow.png" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\appScripts\addMachines.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\globalize.js" />
+    <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
+    <None Include="Scripts\jquery-1.11.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.11.2.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.corner.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\JQWidgets\jqx-all.js" />
+    <Content Include="Scripts\JQWidgets\jqxangular.js" />
+    <Content Include="Scripts\JQWidgets\jqxbulletchart.js" />
+    <Content Include="Scripts\JQWidgets\jqxbuttongroup.js" />
+    <Content Include="Scripts\JQWidgets\jqxbuttons.js" />
+    <Content Include="Scripts\JQWidgets\jqxcalendar.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.annotations.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.api.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.core.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.rangeselector.js" />
+    <Content Include="Scripts\JQWidgets\jqxchart.waterfall.js" />
+    <Content Include="Scripts\JQWidgets\jqxcheckbox.js" />
+    <Content Include="Scripts\JQWidgets\jqxcolorpicker.js" />
+    <Content Include="Scripts\JQWidgets\jqxcombobox.js" />
+    <Content Include="Scripts\JQWidgets\jqxcomplexinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxcore.js" />
+    <Content Include="Scripts\JQWidgets\jqxdata.export.js" />
+    <Content Include="Scripts\JQWidgets\jqxdata.js" />
+    <Content Include="Scripts\JQWidgets\jqxdatatable.js" />
+    <Content Include="Scripts\JQWidgets\jqxdatetimeinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxdocking.js" />
+    <Content Include="Scripts\JQWidgets\jqxdockpanel.js" />
+    <Content Include="Scripts\JQWidgets\jqxdragdrop.js" />
+    <Content Include="Scripts\JQWidgets\jqxdraw.js" />
+    <Content Include="Scripts\JQWidgets\jqxdropdownbutton.js" />
+    <Content Include="Scripts\JQWidgets\jqxdropdownlist.js" />
+    <Content Include="Scripts\JQWidgets\jqxeditor.js" />
+    <Content Include="Scripts\JQWidgets\jqxexpander.js" />
+    <Content Include="Scripts\JQWidgets\jqxfileupload.js" />
+    <Content Include="Scripts\JQWidgets\jqxformattedinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxgauge.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.aggregates.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.columnsreorder.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.columnsresize.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.edit.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.export.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.filter.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.grouping.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.pager.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.selection.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.sort.js" />
+    <Content Include="Scripts\JQWidgets\jqxgrid.storage.js" />
+    <Content Include="Scripts\JQWidgets\jqxinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxknockout.js" />
+    <Content Include="Scripts\JQWidgets\jqxlistbox.js" />
+    <Content Include="Scripts\JQWidgets\jqxlistmenu.js" />
+    <Content Include="Scripts\JQWidgets\jqxmaskedinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxmenu.js" />
+    <Content Include="Scripts\JQWidgets\jqxnavbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxnavigationbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxnotification.js" />
+    <Content Include="Scripts\JQWidgets\jqxnumberinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxpanel.js" />
+    <Content Include="Scripts\JQWidgets\jqxpasswordinput.js" />
+    <Content Include="Scripts\JQWidgets\jqxprogressbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxradiobutton.js" />
+    <Content Include="Scripts\JQWidgets\jqxrangeselector.js" />
+    <Content Include="Scripts\JQWidgets\jqxrating.js" />
+    <Content Include="Scripts\JQWidgets\jqxresponse.js" />
+    <Content Include="Scripts\JQWidgets\jqxribbon.js" />
+    <Content Include="Scripts\JQWidgets\jqxscrollbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxscrollview.js" />
+    <Content Include="Scripts\JQWidgets\jqxslider.js" />
+    <Content Include="Scripts\JQWidgets\jqxsplitter.js" />
+    <Content Include="Scripts\JQWidgets\jqxswitchbutton.js" />
+    <Content Include="Scripts\JQWidgets\jqxtabs.js" />
+    <Content Include="Scripts\JQWidgets\jqxtoolbar.js" />
+    <Content Include="Scripts\JQWidgets\jqxtooltip.js" />
+    <Content Include="Scripts\JQWidgets\jqxtouch.js" />
+    <Content Include="Scripts\JQWidgets\jqxtree.js" />
+    <Content Include="Scripts\JQWidgets\jqxtreegrid.js" />
+    <Content Include="Scripts\JQWidgets\jqxtreemap.js" />
+    <Content Include="Scripts\JQWidgets\jqxvalidator.js" />
+    <Content Include="Scripts\JQWidgets\jqxwindow.js" />
+    <Content Include="Scripts\JQWidgets\styles\images\backgroundTop.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\backImage.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_blackhover.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_blackhover_horizontal.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_blackpressed.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_blackpressed_horizontal.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_black_horizontal.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_blueenergy.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_darkblue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_darkbluehover.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\bg_darkbluepressed.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\blackbackground.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\black_gradient.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_blue_indeterminate.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_disabled.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_indeterminate_black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_indeterminate_disabled.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_indeterminate_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_lightblue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_lightblue_indeterminate.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\check_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\close.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\close_black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\close_blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\close_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\colorpicker\bar-hue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\colorpicker\bar-saturation.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\colorpicker\map-hue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\colorpicker\map-saturation-overlay.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\colorpicker\map-saturation.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\colorpicker\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\crosshair-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\crosshair.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-icons_a83300_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\darkred_gradient.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\drag.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\dragcancel.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\error.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\filter.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\html_editor.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\html_editor_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-calendar-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-calendar.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-cancel-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-cancel.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-delete-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-delete.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-down-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-down-transparent.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-down-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-down.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-edit-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-edit.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-first-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-first-transparent.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-first-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-first.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-last-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-last-transparent.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-last-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-last.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-left-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-left-transparent.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-left-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-left.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-menu-minimized-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-menu-minimized.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-recurrence-exception-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-recurrence-exception.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-recurrence-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-recurrence.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-right-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-right-transparent.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-right-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-right.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-save-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-save.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-showpassword-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-showpassword.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-time-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-time.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-up-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-up-transparent.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-up-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\icon-up.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\info.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-icons_4eb305_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-icons_72b42d_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\le-frog\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\icon-first.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\icon-last.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\lightness\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\loader-small.gif" />
+    <Content Include="Scripts\JQWidgets\styles\images\loader.gif" />
+    <Content Include="Scripts\JQWidgets\styles\images\mail.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\menubutton.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-down-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-down.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-first-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-first.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-last-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-last.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-left-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-left.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-right - Copy.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-right-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-right.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-up-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\metro-icon-up.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\multi-arrow.gif" />
+    <Content Include="Scripts\JQWidgets\styles\images\office-icon-down.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\office-icon-first.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\office-icon-last.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\office-icon-left.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\office-icon-right.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\office-icon-up.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-icons_3383bb_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-icons_999999_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\overcast\ui-icons_fbc856_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pin-black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pin-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pin-lightblue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pin-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pin-yellow.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pin.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pinned-black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pinned-blue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pinned-lightblue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pinned-white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pinned-yellow.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pinned.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\plus.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\plus_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\pointer.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\rangebar_classic.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\rangebar_darkblue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\rangebar_shinyblack.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\rangebar_summer.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\icon-first.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\icon-last.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\redmond\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\red_arrow_down.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\red_arrow_up.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\red_gradient.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_check_black.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_check_disabled.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_check_indeterminate.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_check_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_classic_hover.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_classic_normal.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\roundbg_disabled.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\search.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\search_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\smoothness\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sortasc.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sortascbutton.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sortdesc.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sortdescbutton.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sortremove.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\star.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_0078ae_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_056b93_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_f5e175_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\start\ui-icons_fcd113_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\star_disabled.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\star_hover.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\success.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ReadMe.txt" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_d19405_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_eb990f_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\sunny\ui-icons_ffe180_256x240.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\tick.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\time.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\track_classic.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\track_darkblue.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\track_shinyblack.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\track_summer.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\warning.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\wp_check_indeterminate_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\images\wp_check_white.png" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.android.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.arctic.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.base.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.black.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.blackberry.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.bootstrap.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.classic.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.darkblue.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.energyblue.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.fresh.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.glacier.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.highcontrast.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.metro.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.metrodark.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.mobile.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.office.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.orange.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.shinyblack.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.summer.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-darkness.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-le-frog.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-lightness.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-overcast.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-redmond.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-smoothness.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-start.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.ui-sunny.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.web.css" />
+    <Content Include="Scripts\JQWidgets\styles\jqx.windowsphone.css" />
+    <Content Include="Scripts\jstree.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout-3.3.0.debug.js" />
+    <Content Include="Scripts\knockout-3.3.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\raphael-min.js" />
+    <Content Include="Scripts\raphael.js" />
+    <Content Include="Scripts\RealTimeSummary.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-animation.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-api-annotations.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-api-rules.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-api.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-area.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-area3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-boxplot.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-bubble.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-chord.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-core.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-csv.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-debug.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-dragging.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-errorbars.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-export.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-gauge.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-grid.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-guide.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-hbar.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-hbar3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-hbubble.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-hbullet.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-hfunnel.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-history.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-hscatter.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-legend.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-line.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-line3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-afg.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ago.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-alb.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-and.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-are.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-arg.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-arm.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-aus.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-aut.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-aze.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bdi.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bel.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ben.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bfa.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bgr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bih.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-blr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bol.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bra.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-brn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-btn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-bwa.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-caf.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-can.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-che.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-chl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-chn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-civ.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cmr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cod.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cog.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-col.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cri.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cub.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cyp.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-cze.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-deu.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-dnk.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ecu.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-egy.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-esp.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-espL2.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-est.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-eth.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-fin.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-fra.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-fraL2.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gab.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gbr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gbrL2.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-geojson.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gha.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gmb.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gnb.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-grc.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-gtm.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-guf.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-guy.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-hrv.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-hun.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ind.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-irl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-irn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-isl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-isr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ita.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-jpn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-kaz.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ken.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-kor.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-kwt.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-lao.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-lbr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-lie.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ltu.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-lux.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-lva.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-mda.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-mex.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-mkd.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-mne.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-moz.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-nam.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ncl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-nga.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-nld.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-nor.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-nzl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-omn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-pak.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-pan.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-per.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-phl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-png.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-pol.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-prt.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-qat.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-rou.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-rus.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-rwa.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-sen.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-slv.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-srb.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-sur.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-svk.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-svn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-swe.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-tha.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-tjk.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-tun.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-tur.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-twn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-uga.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ukr.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ury.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ak.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_al.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ar.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_az.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ca.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_co.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ct.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_dc.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_de.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_fl.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ga.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_hi.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ia.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_id.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_il.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_in.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ks.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ky.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_la.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ma.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_md.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_me.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_mi.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_mn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_mo.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ms.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_mt.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_nc.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_nd.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ne.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_nh.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_nj.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_nm.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_nv.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ny.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_oh.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ok.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_or.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_pa.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ri.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_sc.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_sd.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_tn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_tx.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_ut.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_va.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_vt.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_wa.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_wi.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_wv.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-usa_wy.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-uzb.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-ven.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-vnm.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-world-continents.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-world-countries.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-yem.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-zaf.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-zmb.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps-zwe.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-maps.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-nestedpie.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-objects.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-pareto.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-patterns.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-piano.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-pie.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-pie3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-populationpyramid.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-preview.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-r.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-radar.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-range.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-rankflow.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-refresh.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-scalemarkers.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-scatter.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-scroll.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-selection.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-stock.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-toolbar3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-tooltip.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-treemap.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-varea.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-vbar.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-vbar3d.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-vbullet.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-venn.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-vfunnel.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-vline.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-waterfall.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-wordcloud.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-xy.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-yx.min.js" />
+    <Content Include="Scripts\ZingCharts\modules\zingchart-zoom.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-3d.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-animation.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-api.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-area.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-area3d.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-boxplot.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-bubble.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-chord.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-core.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-csv.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-debug.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-errorbars.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-export.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-gauge.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-grid.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-guide.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-hbar.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-hbar3d.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-hbubble.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-hbullet.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-hfunnel.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-history.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-hscatter.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-legend.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-line.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-line3d.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-afg.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ago.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-alb.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-and.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-are.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-arg.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-arm.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-aus.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-aut.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-aze.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bdi.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bel.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ben.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bfa.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bgr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bih.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-blr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bol.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bra.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-brn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-btn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-bwa.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-caf.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-can.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-che.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-chl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-chn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-civ.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cmr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cod.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cog.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-col.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cri.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cub.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cyp.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-cze.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-deu.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-dnk.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ecu.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-egy.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-esp.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-espL2.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-est.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-eth.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-fin.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-fra.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-fraL2.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gab.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gbr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gbrL2.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gha.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gmb.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gnb.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-grc.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-gtm.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-guf.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-guy.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-hrv.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-hun.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ind.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-irl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-irn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-isl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-isr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ita.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-jpn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-kaz.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ken.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-kor.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-kwt.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-lao.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-lbr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-lie.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ltu.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-lux.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-lva.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-mda.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-mex.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-mkd.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-mne.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-moz.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-nam.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ncl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-nga.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-nld.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-nor.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-nzl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-omn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-pak.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-pan.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-per.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-phl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-png.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-pol.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-prt.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-qat.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-rou.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-rus.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-rwa.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-sen.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-slv.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-srb.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-sur.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-svk.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-svn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-swe.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-tha.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-tjk.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-tun.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-tur.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-twn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-uga.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ukr.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ury.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ak.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_al.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ar.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_az.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ca.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_co.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ct.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_dc.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_de.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_fl.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ga.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_hi.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ia.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_id.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_il.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_in.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ks.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ky.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_la.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ma.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_md.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_me.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_mi.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_mn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_mo.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ms.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_mt.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_nc.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_nd.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ne.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_nh.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_nj.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_nm.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_nv.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ny.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_oh.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ok.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_or.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_pa.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ri.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_sc.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_sd.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_tn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_tx.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_ut.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_va.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_vt.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_wa.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_wi.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_wv.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-usa_wy.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-uzb.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-ven.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-vnm.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-world-continents.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-world-countries.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-yem.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-zaf.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-zmb.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps-zwe.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-maps.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-nestedpie.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-objects.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-pareto.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-patterns.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-piano.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-pie.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-pie3d.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-populationpyramid.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-preview.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-r.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-radar.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-range.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-rankflow.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-refresh.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-scalemarkers.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-scatter.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-scroll.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-selection.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-stock.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-tooltip.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-treemap.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-varea.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-vbar.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-vbar3d.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-vbullet.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-venn.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-vfunnel.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-vline.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-waterfall.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-wordcloud.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-xy.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-yx.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\modules-phantomjs\zingchart-phantomjs-zoom.min.js" />
+    <Content Include="Scripts\ZingCharts\phantomjs\zingchart-phantomjs.min.js" />
+    <Content Include="Scripts\ZingCharts\zingchart.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Menu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\Documents\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1495</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1495/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
