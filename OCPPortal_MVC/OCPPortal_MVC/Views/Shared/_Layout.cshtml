@@ -85,16 +85,16 @@
 
 
                 $('.roundedDiv').corner('keep 10px');
-                @*$('#inputbtn').click(function () {
-                    document.location = '@Url.Action("Index","MachineOutputRecords")';
+                $('#PlanInputBtn').click(function () {
+                    document.location = '@Url.Action("Planinput", "Home")';
                 })
-                $('#reprtbtn').click(function () {
-                    document.location = '@Url.Action("Index","Report")';
+                $('#ConfirmationBtn').click(function () {
+                    document.location = '@Url.Action("Confirmation", "Home")';
                 })
-                $('#grpbtn').click(function () {
-                    document.location = '@Url.Action("Index","Graphs")';
+                $('#ReportBtn').click(function () {
+                    document.location = '@Url.Action("Reports", "Home")';
                 })
-                $('#Mngbtn').click(function () {
+                @*$('#Mngbtn').click(function () {
                     document.location = '@Url.Action("Index", "Lines")';
                 })*@
             });

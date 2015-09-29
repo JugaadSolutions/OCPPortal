@@ -1,0 +1,49 @@
+﻿@section menu{
+    @Html.Partial("Menu")
+}
+@section Scripts{
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#planFileUpload').jqxFileUpload({ width: 300, uploadUrl: '', fileInputName: 'fileToUpload' });
+        });
+</script>
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="col-md-offset-2" style="margin-top:2%">
+                <label id="operatorId">OperatorID:</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-offset-2" style="margin-top:2%">
+                <input class=" form-control input-md" id="Operator" type="text">
+            </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="col-md-offset-2" style="margin-top:2%">
+                <label id=" planlbl">
+                Plan:</label>
+            </div>
+            </div>
+        <div class="col-md-3">
+            <div class="col-md-offset-2" style="margin-top:2%">
+                <div id="planFileUpload">
+                </div>
+            </div>
+            </div>
+       
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-md-offset-4" style="margin-top:3%">
+                <button id="UploadButton" class="btn btn-info btn-lg ">
+                    Upload
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

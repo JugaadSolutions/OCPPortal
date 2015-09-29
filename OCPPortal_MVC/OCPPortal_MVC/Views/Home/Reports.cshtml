@@ -1,0 +1,68 @@
+﻿@section menu{
+    @Html.Partial("Menu")
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $('#ReportDateTimePickerDiv').jqxDateTimeInput({ width: '100%', formatString: 'dd/MM/yyyy', showTimeButton: false, value: null });
+            $('#ReportEndDateTimePickerDiv').jqxDateTimeInput({ width: '100%', formatString: 'dd/MM/yyyy', showTimeButton: false, value: null });
+            </script>
+    }
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="col-md-offset-2" style="margin-top:2%">
+                <label id="operatorId">OperatorID:</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-offset-2" style="margin-top:2%">
+                <input class=" form-control input-md" id="Operator" type="text">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-offset-0" style="margin-top:2%">
+                <button id="ShowButton" class="btn btn-info btn-lg ">
+                   Show
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:2%;">
+        <div class="col-md-3">
+            <div class="col-md-offset-2">
+                <b> From:</b>
+            </div>
+        </div>
+        <div class="col-md-3" style="">
+            <div class="col-md-offset-0" >
+                <div id="ReportDateTimePickerDiv" style="margin-left:-40%">
+
+                </div>
+                </div>
+            </div>
+        <div class="col-md-3" style="">
+            <div class="col-md-offset-0" style="margin-left:-20%">
+                <b>To:</b>
+                </div>
+            </div>
+
+        <div class="col-md-3" style="">
+            <div class="col-md-offset-0" >
+                <div id="ReportEndDateTimePickerDiv" style="margin-left:-90%">
+
+
+                </div>
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            <div class="col-md-offset-6" style="margin-top:2%;">
+                <button id="ShowBtn" class="btn btn-info btn-lg ">
+                    Show
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

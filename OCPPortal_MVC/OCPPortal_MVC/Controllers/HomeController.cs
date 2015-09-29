@@ -15,6 +15,18 @@ namespace OCPPortal_MVC.Controllers
             return View();
         }
 
+        public ActionResult Planinput()
+        {
+            return View();
+        }
+        public ActionResult Confirmation()
+        {
+            return View();
+        }
+        public ActionResult Reports()
+        {
+            return View();
+        }
        
     }
 }
