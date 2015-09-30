@@ -3,30 +3,33 @@
 }
 
 @section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#ConfirmationTab').jqxTabs({ width: '80%', height: 200, position: 'top' });
 
+        });
+    </script>
 }
+<div id="ContentDiv" class="roundedDiv container-fluid"
+     style="border:green medium solid;border-width:2px;">
+    <div class="container">
+        <div id='confirmwidget'>
+            <div id='ConfirmationTab' style="margin-left:-0.95%">
+                <ul>
+                    <li style="margin-left: 30px;">Production</li>
+                    <li>Quality</li>
+                    <li>Logistics</li>
+                </ul>
 
-<div class="container">
-    <div class="row" style="margin-top:2%;">
-        <div class="col-md-3">
-            <div class="col-md-offset-2">
-                <button id="ProductionButton" class="btn btn-info btn-lg ">
-                    Production
-                </button>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="col-md-offset-0" style="margin-left:-4%">
-                <button id="QualityButton" class="btn btn-info btn-lg ">
-                    Quality
-                </button>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="col-md-offset-0" style="margin-left:-24%">
-                <button id="LogisticsButton" class="btn btn-info btn-lg ">
-                    Logistics
-                </button>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
             </div>
         </div>
     </div>
